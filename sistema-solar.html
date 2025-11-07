@@ -1,0 +1,482 @@
+<html>
+    <head>
+        <title>
+            Interactivo sistema solar
+        </title>
+            <!-- Cristian Alejandro Nolasco Vargas 5C -->
+
+        <style>
+
+            body{
+                background-color: black;
+                justify-content: center;
+            }
+
+            #content{
+                background-color: black;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            #header {
+                background-color: #1f4b6e;
+                border-radius: 10px;
+                padding: 5px;
+                margin: 10px;
+                text-align: center;
+                color: rgb(255, 255, 255);
+                font-family:Arial, Helvetica, sans-serif;
+                
+            }
+
+            #orbitas{
+                height: auto;
+                width: 800px;
+                background-image: url("img/orbitas.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                position:relative;
+                top: 0px;
+                left: 0px;
+                margin: 5px;
+            }
+
+            #mercurio{
+
+                width: 40px;
+                height: 40px;
+                background-image: url("img/mercurio.png");
+                position: absolute;
+                top:240px;
+                left:145px;
+                background-size: contain;    
+                background-repeat: no-repeat; 
+                background-position: center; 
+
+            }
+
+            #venus{
+
+                width: 60px;
+                height: 60px;
+                background-image: url("img/venus.png");
+                position: absolute;
+                top:225px;
+                left:185px;
+                background-size: contain;    
+                background-repeat: no-repeat; 
+                background-position: center; 
+
+            }
+
+            #tierra{
+
+                width: 55px;
+                height: 55px;
+                background-image: url("img/tierra.png");
+                position: absolute;
+                top:230px;
+                left:240px;
+                background-size: contain;    
+                background-repeat: no-repeat; 
+                background-position: center; 
+
+            }
+
+            #marte{
+
+                width: 45px;
+                height: 45px;
+                background-image: url("img/marte.png");
+                position: absolute;
+                top:235px;
+                left:310px;
+                background-size: contain;    
+                background-repeat: no-repeat; 
+                background-position: center; 
+
+            }
+
+            #jupiter{
+
+                width: 130px;
+                height: 130px;
+                background-image: url("img/jupiter.png");
+                position: absolute;
+                top:190px;
+                left:360px;
+                background-size: contain;    
+                background-repeat: no-repeat; 
+                background-position: center; 
+
+            }
+
+            #saturno{
+
+                width: 200px;
+                height: 200px;
+                background-image: url("img/saturno.png");
+                position: absolute;
+                top:150px;
+                left:440px;
+                background-size: contain;    
+                background-repeat: no-repeat; 
+                background-position: center; 
+                transform: rotate(-10deg);
+
+            }
+
+            #urano{
+
+                width: 75px;
+                height: 75px;
+                background-image: url("img/urano.png");
+                position: absolute;
+                top:220px;
+                left:590px;
+                background-size: contain;    
+                background-repeat: no-repeat; 
+                background-position: center; 
+
+            }
+
+            #neptuno{
+
+                width: 65px;
+                height: 65px;
+                background-image: url("img/neptuno.png");
+                position: absolute;
+                top:225px;
+                left:670px;
+                background-size: contain;    
+                background-repeat: no-repeat; 
+                background-position: center; 
+
+            }
+
+            #pluton{
+
+                width: 50px;
+                height: 50px;
+                background-image: url("img/pluton.png");
+                position: absolute;
+                top:230px;
+                left:735px;
+                background-size: contain;    
+                background-repeat: no-repeat; 
+                background-position: center; 
+
+            }
+
+            #info{
+                height: 450px;
+                width: 180px;
+                background-color: white;
+                border: 1px solid rgb(19, 19, 95);
+                border-radius: 10px;
+                margin: 5px;
+                padding: 3px;
+                text-align: center;
+            }
+
+            #content-title{
+                font-family: sans-serif;
+                font-weight: bold;
+            }
+
+            #content-text{
+                font-family: sans-serif;
+                font-size: 13px;
+            }
+
+            #boton-test{
+                margin-top: 10px;
+                padding: 10px;
+                background-color: rgb(31, 75, 110);
+                color: white;
+                font-size: 20px;
+                border-radius: 5px;
+                
+            }
+
+            #content-exam{
+                width: 350px;
+                background-color: rgb(78, 146, 163);
+                border-radius: 10px;
+                padding: 5px;
+                margin: 10px;
+                font-family:Arial, Helvetica, sans-serif;
+                color: rgb(23, 22, 22);
+                text-align: center;
+                
+            }
+
+            #resultado{
+                
+                font-size: 30px;
+                font-weight: bold;
+                color: rgb(255, 255, 255);
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id="header">
+            <h1>Explorando el sistema solar</h1>
+        </div>
+
+        <div id="content">
+            <div id="info">
+                <h2 id="content-title">Instrucciones</h2>
+                <p id="content-text">Haz click en cada uno de los planetas de la imagen para ver su información. Una vez visualizado el interactivo, realiza un pequeño examen.</p>
+                <br>
+                <img id="content-img" src="img/astronauta.png" alt="astronauta" width="180px" height="180px">
+            </div>
+            <div id="orbitas">
+
+                <div id="mercurio"></div>
+                <div id="venus"></div>
+                <div id="tierra"></div>
+                <div id="marte"></div>
+                <div id="jupiter"></div>
+                <div id="saturno"></div>
+                <div id="urano"></div>
+                <div id="neptuno"></div>
+                <div id="pluton"></div>
+
+            </div>
+
+    
+
+            <div id="content-exam">
+
+                <h2>Test del sistema solar</h2>
+                <button id="boton-test">Iniciar Test</button>
+                <br>
+                <br>
+                <span id="resultado">0/0</span>
+                <br>
+                <br>
+                <img src="img/astronaut.gif" alt="astronauta" width="250px" height="250px" style="border-radius: 30%;">
+
+            </div>
+            
+        </div>
+    
+        
+
+        
+    </body>
+
+    <script type="text/javascript">
+
+        let puntaje = 0;
+        let pregunta = "";
+
+        document.getElementById('mercurio').onclick = function() {
+
+            document.getElementById('content-title').textContent = 'Mercurio';
+            document.getElementById('content-text').textContent = 'Mercurio es el planeta más pequeño de nuestro sistema solar y el más cercano al Sol. Es apenas un poco más grande que la Luna. Desde la superficie de Mercurio, el Sol parecería más de tres veces más grande que visto desde la Tierra, y la luz solar sería hasta siete veces más brillante.';
+            document.getElementById('content-img').setAttribute('src', 'img/mercurio.png');    
+        
+        };
+
+        document.getElementById('venus').onclick = function() {
+
+            document.getElementById('content-title').textContent = 'Venus';
+            document.getElementById('content-text').textContent = 'Venus es el segundo planeta desde el Sol y nuestro vecino planetario más cercano. Es el planeta más caliente de nuestro sistema solar y a veces se le llama gemelo de la Tierra. ';
+            document.getElementById('content-img').setAttribute('src', 'img/venus.png');    
+        
+        };
+
+        document.getElementById('tierra').onclick = function() {
+
+            document.getElementById('content-title').textContent = 'Tierra';
+            document.getElementById('content-text').textContent = 'Si bien la Tierra es solo el quinto planeta más grande del sistema solar, es el único con agua líquida en la superficie. Ligeramente más grande que Venus, la Tierra es el mayor de los cuatro planetas más cercanos al Sol, todos compuestos de roca y metal. ';
+            document.getElementById('content-img').setAttribute('src', 'img/tierra.png');    
+        
+        };
+
+        document.getElementById('marte').onclick = function() {
+
+            document.getElementById('content-title').textContent = 'Marte';
+            document.getElementById('content-text').textContent = 'Marte, el cuarto planeta desde el Sol, es un mundo polvoriento, frío y desértico con una atmósfera muy tenue. Este dinámico planeta tiene estaciones, casquetes polares, volcanes extintos, cañones y clima.';
+            document.getElementById('content-img').setAttribute('src', 'img/marte.png');    
+        
+        };
+
+        document.getElementById('jupiter').onclick = function() {
+
+            document.getElementById('content-title').textContent = 'Jupiter';
+            document.getElementById('content-text').textContent = 'Júpiter es un mundo de extremos. Es el planeta más grande de nuestro sistema solar: si fuera una cáscara hueca, cabrían en su interior 1000 Tierras. También es el planeta más antiguo, formado a partir del polvo y los gases que quedaron de la formación del Sol hace 4600 millones de años.';
+            document.getElementById('content-img').setAttribute('src', 'img/jupiter.png');    
+        
+        };
+
+        document.getElementById('saturno').onclick = function() {
+
+            document.getElementById('content-title').textContent = 'Saturno';
+            document.getElementById('content-text').textContent = 'Al igual que su compañero gigante gaseoso Júpiter, Saturno es una enorme esfera compuesta principalmente de hidrógeno y helio. Saturno no es el único planeta con anillos, pero ninguno es tan espectacular ni complejo como los de Saturno. Saturno también tiene docenas de lunas.';
+            document.getElementById('content-img').setAttribute('src', 'img/saturno.png');    
+        
+        };
+
+        document.getElementById('urano').onclick = function() {
+
+            document.getElementById('content-title').textContent = 'Urano';
+            document.getElementById('content-text').textContent = 'Urano es un mundo muy frío y ventoso. Este gigante helado está rodeado de 13 anillos tenues y 28 lunas pequeñas. Urano gira casi 90 grados con respecto al plano de su órbita. Esta singular inclinación hace que Urano parezca girar lateralmente, orbitando el Sol como una bola rodante.';
+            document.getElementById('content-img').setAttribute('src', 'img/urano.png');    
+        
+        };
+
+        document.getElementById('neptuno').onclick = function() {
+
+            document.getElementById('content-title').textContent = 'Neptuno';
+            document.getElementById('content-text').textContent = 'Oscuro, frío y azotado por vientos supersónicos, el gigante helado Neptuno se encuentra a más de 30 veces la distancia del Sol que la Tierra. Neptuno es el único planeta de nuestro sistema solar invisible a simple vista. En 2011, Neptuno completó su primera órbita de 165 años desde su descubrimiento en 1846.';
+            document.getElementById('content-img').setAttribute('src', 'img/neptuno.png');    
+        
+        };
+
+        document.getElementById('pluton').onclick = function() {
+
+            document.getElementById('content-title').textContent = 'Pluton';
+            document.getElementById('content-text').textContent = 'Plutón es un planeta enano ubicado en el Cinturón de Kuiper, más allá de Neptuno, descubierto en 1930 por Clyde Tombaugh. Fue considerado el noveno planeta hasta 2006, cuando la Unión Astronómica Internacional lo reclasificó.';
+            document.getElementById('content-img').setAttribute('src', 'img/pluton.png');    
+        
+        };
+
+         document.getElementById('boton-test').onclick = function(){
+
+            alert("Bienvenidos a la test del sistema solar");
+            alert("Responde correctamente todas las preguntas para ganar");
+
+            if(pregunta = prompt("¿Cuál es el planeta más cercano al Sol?")){
+                   
+                  pregunta = pregunta.trim();
+                  
+              }
+              if (pregunta.toLowerCase() === "mercurio") {
+                  alert("¡Correcto! Mercurio es el planeta más cercano al Sol.");
+                  puntaje += 1;
+              } else {
+                  alert("Incorrecto. La respuesta correcta es: Mercurio.");
+              }
+
+            
+            if(pregunta = prompt("¿Cuál es el planeta más grande del sistema solar?")){
+                   pregunta = pregunta.trim();
+              }
+              if (pregunta.toLowerCase() === "jupiter") {
+                  alert("¡Correcto! Júpiter es el planeta más grande del sistema solar.");
+                  puntaje += 1;
+              } else {
+                  alert("Incorrecto. La respuesta correcta es: Júpiter.");
+              }
+
+            if(pregunta = prompt("¿Qué planeta es conocido por sus impresionantes anillos?")){
+                  pregunta = pregunta.trim();
+            }
+              if (pregunta.toLowerCase() === "saturno") {
+                  alert("¡Correcto! Saturno es conocido por sus impresionantes anillos.");
+                  puntaje += 1;
+              } else {
+                  alert("Incorrecto. La respuesta correcta es: Saturno.");
+              }
+
+            if(pregunta = prompt("¿Cuál es el planeta más caliente del sistema solar?")){
+                  
+                  pregunta = pregunta.trim();
+                  
+              }
+              if (pregunta.toLowerCase() === "venus") {
+                  alert("¡Correcto! Venus es el planeta más caliente del sistema solar.");
+                  puntaje += 1;
+              } else {
+                  alert("Incorrecto. La respuesta correcta es: Venus.");
+              }
+
+            if(pregunta = prompt("¿Qué planeta tiene estaciones, casquetes polares y volcanes extintos?")){
+                  pregunta = pregunta.trim();
+            }
+            if (pregunta.toLowerCase() === "marte") {
+                alert("¡Correcto! Marte tiene estaciones, casquetes polares y volcanes extintos.");
+                puntaje += 1;
+            } else {
+                alert("Incorrecto. La respuesta correcta es: Marte.");
+            }
+
+            if(pregunta = prompt("¿Qué planeta es el único con agua líquida en la superficie?")){
+                pregunta = pregunta.trim();
+            }
+            if (pregunta.toLowerCase() === "tierra") {
+                alert("¡Correcto! La Tierra es el único planeta con agua líquida en la superficie.");
+                puntaje += 1;
+            } else {
+                alert("Incorrecto. La respuesta correcta es: Tierra.");
+            }
+
+            if(pregunta = prompt("¿Qué planeta gira casi 90 grados con respecto al plano de su órbita?")){
+                pregunta = pregunta.trim();
+            }
+            if (pregunta.toLowerCase() === "urano") {
+                alert("¡Correcto! Urano gira casi 90 grados con respecto al plano de su órbita.");
+                puntaje += 1;
+            } else {
+                alert("Incorrecto. La respuesta correcta es: Urano.");
+            }
+
+            if(pregunta = prompt("¿Qué planeta está a más de 30 veces la distancia del Sol que la Tierra y es invisible a simple vista?")){
+                pregunta = pregunta.trim();
+            }
+            if (pregunta.toLowerCase() === "neptuno") {
+                alert("¡Correcto! Neptuno está muy lejos y es invisible a simple vista.");
+                puntaje += 1;
+            } else {
+                alert("Incorrecto. La respuesta correcta es: Neptuno.");
+            }
+
+            if(pregunta = prompt("¿Qué cuerpo fue reclasificado en 2006 por la Unión Astronómica Internacional como planeta enano?")){
+                pregunta = pregunta.trim();
+            }
+            
+            if (pregunta.toLowerCase() === "plutón") {
+                alert("¡Correcto! Plutón es un planeta enano reclasificado en 2006.");
+                puntaje += 1;
+            } else {
+                alert("Incorrecto. La respuesta correcta es: Plutón.");
+            }
+
+            if (pregunta = prompt("¿Qué planeta, si fuera una cáscara hueca, podría contener 1000 Tierras en su interior?")) {
+                pregunta = pregunta.trim();
+            }
+            
+            if (pregunta.toLowerCase() === "jupiter") {
+                alert("¡Correcto! Júpiter es el planeta más grande; si fuera una cáscara hueca, cabrían unas 1000 Tierras en su interior.");
+                puntaje += 1;
+            } else {
+                alert("Incorrecto. La respuesta correcta es: Júpiter.");
+            }
+
+            
+
+            if(puntaje >= 10) {
+                alert("¡Felicidades! Has respondido correctamente todas las preguntas.");
+                document.getElementById("fiesta").setAttribute("class", "visible");
+                document.getElementById("resultado").textContent = puntaje + "/10";
+                
+                  
+            } else {
+                alert("Has respondido " + puntaje + " preguntas correctamente. ¡Sigue intentando!");
+                document.getElementById("resultado").textContent = puntaje + "/10";  
+                document.getElementById("fiesta").setAttribute("class", "visible");
+            }
+
+        };
+
+        
+    </script>
+</html>

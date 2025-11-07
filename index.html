@@ -261,7 +261,7 @@
                 <span id="resultado">0/0</span>
                 <br>
                 <br>
-                <img src="img/astronaut.gif" alt="astronauta" width="250px" height="250px" style="border-radius: 30%;">
+                <img id="testGif" src="img/nasa.jpg" alt="astronauta" width="250px" height="250px" style="border-radius: 30%; ">
 
             </div>
             
@@ -467,12 +467,14 @@
                 alert("¡Felicidades! Has respondido correctamente todas las preguntas.");
                 document.getElementById("fiesta").setAttribute("class", "visible");
                 document.getElementById("resultado").textContent = puntaje + "/10";
+                document.getElementById("testGif").setAttribute("src", "img/astronaut.gif")
                 
                   
             } else {
                 alert("Has respondido " + puntaje + " preguntas correctamente. ¡Sigue intentando!");
                 document.getElementById("resultado").textContent = puntaje + "/10";  
                 document.getElementById("fiesta").setAttribute("class", "visible");
+                document.getElementById("testGif").setAttribute("src", "img/triste.gif")
             }
 
         };

@@ -460,6 +460,9 @@
             } else {
                 alert("Incorrecto. La respuesta correcta es: Júpiter.");
             }
+                    resultado.textContent = puntaje + "/10";
+        resultado.style.display = "block";
+        testGif.style.display = "block";
 
             
 
@@ -474,8 +477,7 @@
                 document.getElementById("resultado").textContent = puntaje + "/10";  
                 document.getElementById("testGif").setAttribute("src", 'img/triste.gif')
             }
-                document.getElementById("resultado").style.display = "block";
-                document.getElementById("testGif").style.display = "block";
+
 
 
         };

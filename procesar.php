@@ -30,14 +30,16 @@
             border-radius:12px;
             padding:20px;
             text-align:center;
-            align-items: center;
+            
 
         }
         .actions {
+            
             display:flex;
-            flex-direction:column; /* apilados */
+            flex-direction:column; 
             gap:10px;
             margin-top:12px;
+            align-items:center; 
         }
         .btn {
             background-color: #1f4b6e;

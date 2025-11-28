@@ -1,4 +1,4 @@
-  <html>
+<html>
     <head>
         <title>
             Interactivo sistema solar
@@ -217,6 +217,20 @@
                 font-size: 30px;
                 font-weight: bold;
                 color: rgb(255, 255, 255);
+            }
+
+            
+            #orbitas > div {
+                transition: transform 180ms ease, filter 180ms ease;
+                cursor: pointer;
+            }
+            #orbitas > div:hover {
+                transform: scale(1.08);
+                filter: drop-shadow(0 0 8px rgba(255,255,255,0.25));
+            }
+            
+            #saturno:hover {
+                transform: rotate(-10deg) scale(1.06);
             }
 
         </style>

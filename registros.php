@@ -97,10 +97,8 @@
             <tr>
                 <th>ID</th>
                 <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>Edad</th>
-                <th>Opciones</th>
-                
+                <th>Comentario</th>
+
             <tr>
             <?php
             while($fila = $resultado->fetch_assoc()){
@@ -128,9 +126,10 @@
             
             ?>
 
-            <a class="btn" href="index.html">Regresar al interactivo</a>
-
         <table>
+
+        <a class="btn" href="index.html">Regresar al interactivo</a>
+   
     </div>
 </body>
 

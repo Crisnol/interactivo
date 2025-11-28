@@ -12,7 +12,7 @@
             exit;
         }
 
-        $sql = "INSERT INTO visitantes (nombre, comentario) VALUES ('$nombre_post','$comentario _post')";
+        $sql = "INSERT INTO visitantes (nombre, comentario) VALUES ('$nombre_post','$comentario_post')";
         if(mysqli_query($conexion, $sql)){
             echo "Registro insertado exitosamente";
         }else{
